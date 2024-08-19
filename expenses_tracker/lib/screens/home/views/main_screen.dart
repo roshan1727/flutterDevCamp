@@ -234,7 +234,7 @@ class MainScreen extends StatelessWidget {
                               height: 50,
                               decoration: const BoxDecoration(
                                   color: Colors.yellow, shape: BoxShape.circle),
-                              child: Icon(Icons.wallet),
+                              child: const Icon(Icons.wallet),
                             ),
                             const SizedBox(
                               width: 12,

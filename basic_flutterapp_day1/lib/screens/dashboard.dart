@@ -1,3 +1,5 @@
+import 'package:basic_flutterapp_day1/screens/SearchScreen.dart';
+import 'package:basic_flutterapp_day1/screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -12,50 +14,33 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen> {
   List items = [
     Container(
-      width: 100,
-      color: Colors.amber,
-      child: const Text('dashboard'),
-    ),
-    ListView(
-      padding: const EdgeInsets.all(10),
-      children: [
-        Container(
-          height: 70.0,
-          color: Colors.cyanAccent,
-          child: const Text('Data One'),
-        ),
-        Container(
-          height: 70.0,
-          color: Colors.amber,
-          child: const Text('Data 2'),
-        ),
-        Container(
-          height: 70.0,
-          color: Colors.redAccent,
-          child: const Text('Data 3'),
-        ),
-        Container(
-          height: 70.0,
-          color: Colors.purpleAccent,
-          child: const Text('Data Four'),
-        )
-      ],
-    ),
-    Container(
-      width: 100,
-      color: Colors.white,
-      child: const Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Text('Welcome Home '),
-          Image(
-            image: AssetImage('assets/image/Banner.png'),
-            height: 400,
-          )
+      width: 700,
+      padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
+      color: Colors.indigo[50],
+      child: ListView(
+        children: const [
+          ListTile(
+            title: Text('Task'),
+            tileColor: Colors.blueGrey,
+            selectedTileColor: Colors.blue,
+            leading: Icon(Icons.note_add),
+            trailing: Icon(Icons.navigate_next),
+          ),
+          ListTile(
+              title: Text('Projects'),
+              leading: Icon(Icons.account_tree_outlined),
+              trailing: Icon(Icons.navigate_next),
+              tileColor: Colors.blueGrey),
+          ListTile(
+              title: Text('work commpleted'),
+              leading: Icon(Icons.done),
+              trailing: Icon(Icons.navigate_next),
+              tileColor: Colors.blueGrey)
         ],
       ),
-    )
+    ),
+    const SearchScreen(),
+    const ProfilePage()
   ];
   var _selectedIndex = 0;
   @override

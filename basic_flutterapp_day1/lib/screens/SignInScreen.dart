@@ -72,12 +72,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       },
                       child: const Text('Sign in')),
                   const Padding(padding: EdgeInsets.symmetric(vertical: 5.0)),
-                  ElevatedButton(
+                  TextButton(
                       onPressed: () {
                         Navigator.of(context).pop();
                         Navigator.of(context).pushNamed('/signUp');
                       },
-                      child: const Text('sign up'))
+                      child: const Text(
+                        'Goto Signup',
+                        style: TextStyle(color: Colors.redAccent),
+                      ))
                 ],
               ),
             ),
